@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 
+// Функция входа в программу
 fun main() = application {
     Window(
         onCloseRequest = ::exitApplication,
@@ -27,6 +28,9 @@ fun main() = application {
     }
 }
 
+
+
+// Результативное поле, в котором можно копировать значение и очищать его.
 @Composable
 fun ResultField(
     result: String?,
@@ -37,7 +41,7 @@ fun ResultField(
         verticalAlignment = Alignment.CenterVertically
     ) {
         Column {
-            SelectionContainer {
+            SelectionContainer { // Делает возможным выделить значение
                 Text(
                     text = result ?: "",
                     style = style
@@ -48,7 +52,7 @@ fun ResultField(
         Spacer(Modifier.width(20.dp))
 
         Column {
-            if (result != null) {
+            if (result != null) { // "Крестик" для очистки значения
                 IconButton(
                     onClick = onClear,
                     modifier = Modifier

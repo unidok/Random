@@ -13,6 +13,7 @@ import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
+// Перечисление категорий
 enum class Category(
     val displayName: String
 ) {
@@ -35,6 +36,7 @@ fun CategorySelectionScreen() {
     var selectedCategory by remember { mutableStateOf(Category.NUMBER) }
 
     Row(modifier = Modifier.fillMaxSize()) {
+        // Список категорий слева
         CategoryList(
             selectedCategory = selectedCategory,
             onCategorySelected = { selectedCategory = it },
@@ -44,6 +46,7 @@ fun CategorySelectionScreen() {
                 .background(MaterialTheme.colors.surface)
         )
 
+        // Разделитель списка категорий и экрана
         Divider(
             modifier = Modifier
                 .fillMaxHeight()
@@ -51,6 +54,7 @@ fun CategorySelectionScreen() {
             color = MaterialTheme.colors.primaryVariant
         )
 
+        // Экран выбранной категории
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -62,6 +66,7 @@ fun CategorySelectionScreen() {
     }
 }
 
+// Отображение списка категорий
 @Composable
 fun CategoryList(
     selectedCategory: Category,
