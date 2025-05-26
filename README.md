@@ -1,3 +1,7 @@
+Скачать установщик (Desktop): https://drive.google.com/file/d/18cJJMV19x6yStTzXRrRrPCZ2-K19EGu5/view
+
+
+---
 This is a Kotlin Multiplatform project targeting Desktop.
 
 * `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
